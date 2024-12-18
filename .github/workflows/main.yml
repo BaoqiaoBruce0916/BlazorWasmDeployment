@@ -12,7 +12,9 @@ jobs:
     steps:
     # uses GitHub's checkout action to checkout code form the master branch
     - uses: actions/checkout@v4
-    
+      with:
+        GITHUB_TOKEN: ${{ secrets.SuperToken }}
+        
     # sets up .NET Core SDK 9.0
     - name: Setup .NET Core SDK
       uses: actions/setup-dotnet@v4.1.0
